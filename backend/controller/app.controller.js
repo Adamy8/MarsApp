@@ -1,5 +1,5 @@
 import AppModel from "../model/app.model.js";
-// import mongoose from "mongoose";
+import mongoose from "mongoose";
 
 export const createApp = async (req, res) => {
     try {
@@ -33,7 +33,7 @@ export const deleteApp = async (req, res) => {
     if(!mongoose.Types.ObjectId.isValid(id)) return res.status(400).json({success:false, message: "Invalid ID" });
 
     try {
-        const deletedApp = await AppModel.findByIdAndRemove(id);
+        const deletedApp = await AppModel.findByIdAndDelete(id);
         //existence check
         if(!deletedApp) return res.status(404).json({success:false, message: "Application not found" });
         res.status(200).json({success:true, data: deletedApp, message: "Application deleted successfully" });

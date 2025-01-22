@@ -1,4 +1,4 @@
-# MarsApp (coding assessment for Cozii)
+# MarsApp (coding assessment)
 
 
 ```npm run dev```(under both /MarsApp and /MarsApp/backend) to develop locally

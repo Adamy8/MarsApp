@@ -4,6 +4,6 @@ import { getAllApps, getApp, createApp, updateApp, deleteApp } from '../controll
 const router = express.Router();
 
 router.route('/').get(getAllApps).post(createApp);
-router.route('/:id').put(updateApp).delete(deleteApp).get(getApp);
+router.route('/:id').get(getApp).put(updateApp).delete(deleteApp);
 
 export default router;
