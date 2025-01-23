@@ -1,5 +1,10 @@
 # MarsApp (coding assessment)
 
+### Tech stack:
+- Frontend: Nextjs, React, shadCN, Tailwind CSS, TypeScript
+- Backend: Nodejs, Express
+- Database: MongoDB
+- Deploy: 
 
 ```npm run dev```(under both /MarsApp and /MarsApp/backend) to develop locally
 
