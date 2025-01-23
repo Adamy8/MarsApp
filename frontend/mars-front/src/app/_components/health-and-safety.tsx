@@ -1,6 +1,5 @@
 import { useFormContext } from "react-hook-form"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Textarea } from "@/components/ui/textarea"
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form"
@@ -20,7 +19,7 @@ export default function HealthAndSafetyForm() {
               <Checkbox checked={field.value} onCheckedChange={field.onChange} />
             </FormControl>
             <div className="space-y-1 leading-none">
-              <FormLabel>I declare that I am in good health and fit for space travel</FormLabel>
+              <FormLabel>I declare that I am in good health and fit for Mars</FormLabel>
               <FormMessage />
             </div>
           </FormItem>

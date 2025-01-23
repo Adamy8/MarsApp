@@ -1,6 +1,5 @@
 import { useFormContext } from "react-hook-form"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form"
 
@@ -54,10 +53,10 @@ export default function PersonalInfoForm() {
               </FormControl>
               <SelectContent>
                 <SelectItem value="us">United States</SelectItem>
-                <SelectItem value="uk">United Kingdom</SelectItem>
                 <SelectItem value="ca">Canada</SelectItem>
-                <SelectItem value="au">Australia</SelectItem>
-                {/* Add more nationalities as needed */}
+                <SelectItem value="cn">China</SelectItem>
+                <SelectItem value="uk">United Kingdom</SelectItem>
+                {/* maybe more countries here */}
               </SelectContent>
             </Select>
             <FormMessage />
@@ -71,7 +70,7 @@ export default function PersonalInfoForm() {
         rules={{
           required: "Email is required",
           pattern: {
-            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,    // email regex copied from https://emailregex.com/
             message: "Invalid email address",
           },
         }}

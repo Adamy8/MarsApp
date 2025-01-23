@@ -63,11 +63,14 @@ export default function MultiStageForm() {
     setStage(stage - 1)
   }
 
+  const stageNames = ["Personal Information", "Travel Preferences", "Health and Safety"];
+  const stageName = stageNames[stage - 1];
+
   return (
     <FormProvider {...methods}>
       <Card className="w-full max-w-2xl mx-auto">
         <CardHeader>
-          <CardTitle>Mars Travel Application - Stage {stage}</CardTitle>
+          <CardTitle> {stageName} </CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={methods.handleSubmit(onSubmit)}>
@@ -79,9 +82,9 @@ export default function MultiStageForm() {
         <CardFooter className="flex justify-between">
           {stage > 1 && <Button onClick={handlePrevious}>Previous</Button>}
           {stage < 3 ? (
-            <Button onClick={handleNext}>Next</Button>
+            <Button onClick={handleNext}>Next</Button> //next when not last page
           ) : (
-            <Button onClick={methods.handleSubmit(onSubmit)}>Submit</Button>
+            <Button onClick={methods.handleSubmit(onSubmit)}>Submit</Button> //sumbit when last page
           )}
         </CardFooter>
       </Card>
