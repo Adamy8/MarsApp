@@ -1,7 +1,7 @@
 # MarsApp (coding assessment)
 
 ### Tech stack:
-- Frontend: Nextjs, React, shadCN, Tailwind CSS, TypeScript
+- Frontend: Nextjs, React, ShadCN, Tailwind CSS, TypeScript
 - Backend: Nodejs, Express
 - Database: MongoDB
 - Deploy: 
