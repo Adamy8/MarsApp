@@ -4,10 +4,12 @@ import dotenv from 'dotenv';
 dotenv.config();
 import { connectDB } from './config/db.js';
 import appRoutes from './router/app.route.js';
+import cors from 'cors';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 app.use(express.json());
+app.use(cors());  // to fix CORS issue
 app.use('/api/applications', appRoutes);
 
 app.listen(PORT, () => {
