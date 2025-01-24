@@ -7,6 +7,10 @@ import PersonalInfoForm from "./personal-info"
 import TravelPreferencesForm from "./travel-preferences"
 import HealthAndSafetyForm from "./health-and-safety"
 import { useForm, FormProvider } from "react-hook-form"
+import { useApplicationStore } from "@/app/_store/application"
+import { useToast } from "@/hooks/use-toast"    //to toast submission message
+import { Toaster } from "@/components/ui/toaster"
+import router from "next/router"
 
 type FormData = {
   personalInfo: {
@@ -33,6 +37,7 @@ type FormData = {
   }
 }
 
+
 export default function MultiStageForm() {
   const [stage, setStage] = useState(1)
   const methods = useForm<FormData>({
@@ -46,10 +51,28 @@ export default function MultiStageForm() {
       },
     },
   })
-
+  
+  const { toast } = useToast()  //toast hook
+  const { createApplication } = useApplicationStore()
   const onSubmit = (data: FormData) => {
-    console.log("Form submitted: ", data)  //debug
-    // backend here, implement later
+    // console.log("Form submitted: ", data)  //debug
+    const {success, message} = createApplication(data);
+    if (success) {
+      toast({
+        // variant: "success",  //ShadCN doesn't have succcess var, so I'll use default
+        title: "Success!",
+        description: message,
+      })
+      //reset form
+      methods.reset()         //might have a issue here, need check
+      router.push("/");
+    } else {
+      toast({
+        variant: "destructive",
+        title: "Failed!",
+        description: message,
+      })
+    }
   }
 
   const handleNext = async () => {
@@ -86,6 +109,7 @@ export default function MultiStageForm() {
           ) : (
             <Button onClick={methods.handleSubmit(onSubmit)}>Submit</Button> //sumbit when last page
           )}
+          <Toaster />     {/*toaster hook*/}
         </CardFooter>
       </Card>
     </FormProvider>
