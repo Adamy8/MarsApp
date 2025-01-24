@@ -10,7 +10,7 @@ import { useForm, FormProvider } from "react-hook-form"
 import { useApplicationStore } from "@/app/_store/application"
 import { useToast } from "@/hooks/use-toast"    //to toast submission message
 import { Toaster } from "@/components/ui/toaster"
-import router from "next/router"
+import { redirect } from 'next/navigation'
 
 type FormData = {
   personalInfo: {
@@ -52,20 +52,21 @@ export default function MultiStageForm() {
     },
   })
   
+
   const { toast } = useToast()  //toast hook
   const { createApplication } = useApplicationStore()
-  const onSubmit = (data: FormData) => {
+  const onSubmit = async (data: FormData) => {
     // console.log("Form submitted: ", data)  //debug
-    const {success, message} = createApplication(data);
+    const {success, message} = await createApplication(data);
+    console.log("111success , message: ", success, message) //debug
     if (success) {
-      toast({
+      await toast({
         // variant: "success",  //ShadCN doesn't have succcess var, so I'll use default
         title: "Success!",
         description: message,
       })
-      //reset form
-      methods.reset()         //might have a issue here, need check
-      router.push("/");
+      methods.reset()    //might dont need it, cuz redirecting
+      redirect('/');
     } else {
       toast({
         variant: "destructive",
