@@ -56,6 +56,7 @@ export default function PersonalInfoForm() {
                 <SelectItem value="ca">Canada</SelectItem>
                 <SelectItem value="cn">China</SelectItem>
                 <SelectItem value="uk">United Kingdom</SelectItem>
+                <SelectItem value="na">None Above</SelectItem>
                 {/* maybe more countries here */}
               </SelectContent>
             </Select>

@@ -54,6 +54,7 @@ export default function MultiStageForm() {
   
 
   const { toast } = useToast()  //toast hook
+  const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
   const { createApplication } = useApplicationStore()
   const onSubmit = async (data: FormData) => {
     // console.log("Form submitted: ", data)  //debug
@@ -62,12 +63,13 @@ export default function MultiStageForm() {
 
     if (success) {
       toast({
-        // variant: "success",  //ShadCN doesn't have succcess var, so I'll use default
-        title: "Success!",
-        description: message,
+        variant: "successA",  // personalized in toast.tsx
+        title: message + "!",
+        description: "Redirecting...",
       })
-      methods.reset()    //might dont need it, cuz redirecting
-      redirect('/');
+      await delay(1200);  //0.5s
+      // methods.reset()    //might dont need it, cuz redirecting
+      // redirect('/');
     } else {
       toast({
         variant: "destructive",
