@@ -10,7 +10,7 @@ export default function PersonalInfoForm() {
     <div className="space-y-4">
       <FormField
         control={control}
-        name="personalInfo.fullname"
+        name="personalInfo.fullName"
         rules={{ required: "Full name is required" }}
         render={({ field }) => (
           <FormItem>

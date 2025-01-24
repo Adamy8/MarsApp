@@ -58,9 +58,10 @@ export default function MultiStageForm() {
   const onSubmit = async (data: FormData) => {
     // console.log("Form submitted: ", data)  //debug
     const {success, message} = await createApplication(data);
-    console.log("111success , message: ", success, message) //debug
+    // console.log("success , message: ", success, message) //debug
+
     if (success) {
-      await toast({
+      toast({
         // variant: "success",  //ShadCN doesn't have succcess var, so I'll use default
         title: "Success!",
         description: message,
@@ -87,9 +88,9 @@ export default function MultiStageForm() {
     setStage(stage - 1)
   }
 
+
   const stageNames = ["Personal Information", "Travel Preferences", "Health and Safety"];
   const stageName = stageNames[stage - 1];
-
   return (
     <FormProvider {...methods}>
       <Card className="w-full max-w-2xl mx-auto">

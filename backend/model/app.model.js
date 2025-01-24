@@ -5,10 +5,8 @@ const AppSchema = new mongoose.Schema({
     fullName: { type: String},
     birth: { type: Date},
     nationality: { type: String},
-    contactInfo: {
-      email: { type: String},
-      phone: { type: String}
-    }
+    email: { type: String},
+    phone: { type: String}
   },
   travelPreferences: {
     departureDate: { type: Date},

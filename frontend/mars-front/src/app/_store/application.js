@@ -1,3 +1,4 @@
+// global store api
 import {create} from "zustand";
 
 export const useApplicationStore = create((set) => ({
@@ -5,21 +6,17 @@ export const useApplicationStore = create((set) => ({
     setapps: (apps) => set({apps}),
 
     createApplication: async (newApp) => {
-        console.log("newApp: ", newApp) // debug
+        // console.log("newApp: ", newApp) // debug
         const res = await fetch("http://localhost:4000/api/applications",{
             method:"POST",
             headers:{"Content-Type": "application/json"},
             body:JSON.stringify(newApp)
         })
         const data = await res.json();
-        // console.log("res: ",res)//debug
         if (!res.ok) {
             throw new Error(`HTTP error! status: ${res.status}`);
         }
         set((state) => ({apps:{...state.apps, data}}))
-        // console.log("here is the data", data)//debug
-        // console.log("ADYsuccess: ", data.success)
-        // console.log("message: ", data.message)
         return { success: data.success, message: data.message}
     },
 
