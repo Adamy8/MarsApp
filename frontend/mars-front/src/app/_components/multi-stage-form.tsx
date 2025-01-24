@@ -68,8 +68,8 @@ export default function MultiStageForm() {
         description: "Redirecting...",
       })
       await delay(1200);  //0.5s
-      // methods.reset()    //might dont need it, cuz redirecting
-      // redirect('/');
+      methods.reset()    //might dont need it, cuz redirecting
+      redirect('/');
     } else {
       toast({
         variant: "destructive",
