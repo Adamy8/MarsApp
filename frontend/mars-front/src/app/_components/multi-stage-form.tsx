@@ -54,7 +54,7 @@ export default function MultiStageForm() {
   
 
   const { toast } = useToast()  //toast hook
-  const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+  // const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
   const { createApplication } = useApplicationStore()
   const onSubmit = async (data: FormData) => {
     // console.log("Form submitted: ", data)  //debug
