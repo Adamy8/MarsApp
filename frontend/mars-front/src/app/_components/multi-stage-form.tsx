@@ -96,7 +96,7 @@ export default function MultiStageForm() {
   const stageName = stageNames[stage - 1];
   return (
     <FormProvider {...methods} >
-      <Card className="w-full max-w-2xl mx-auto opacity-90">
+      <Card className="w-full max-w-2xl mx-auto opacity-90 bg-gray-200">
         <CardHeader>
           <CardTitle> {stageName} </CardTitle>
         </CardHeader>

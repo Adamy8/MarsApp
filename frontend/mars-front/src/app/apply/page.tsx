@@ -5,6 +5,9 @@ import ParticleBackground from '@/components/ParticleBackground';
 export default function ApplyPage() {
     return (
         <div>
+            <head>
+                <title>MarsApp-Apply</title>
+            </head>
         <div className="min-h-screen bg-[url('../mars.jpg')] bg-cover bg-center">
         <ParticleBackground />
         <div className="flex min-h-screen flex-col items-center justify-between p-24">

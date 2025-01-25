@@ -7,6 +7,9 @@ import { Toaster } from "@/components/ui/toaster"
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-[url('../mars.jpg')] bg-cover bg-center">
+      <head>
+        <title>MarsApp-Home</title>
+      </head>
       <div className="absolute inset-0 bg-gradient-to-b from-red-900/70 to-gray-900/70"></div>
       <ParticleBackground />
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4">
