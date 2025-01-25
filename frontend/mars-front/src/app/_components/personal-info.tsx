@@ -16,7 +16,7 @@ export default function PersonalInfoForm() {
           <FormItem>
             <FormLabel>Full Name</FormLabel>
             <FormControl>
-              <Input {...field} />
+              <Input {...field} value={field.value || ''}/>
             </FormControl>
             <FormMessage />
           </FormItem>

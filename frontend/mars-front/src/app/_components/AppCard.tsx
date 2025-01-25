@@ -57,7 +57,6 @@ const AppCard = ({ app }: { app: any }) => {
 
     return (
         <div className='bg-gray-900 bg-opacity-85 p-4 rounded-lg'>
-            <Toaster />
             
             <div className="text-white">
                 <div className="mb-4">

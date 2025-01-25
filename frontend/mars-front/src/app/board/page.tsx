@@ -5,6 +5,7 @@ import ParticleBackground from "@/components/ParticleBackground"
 import { useApplicationStore } from '../_store/application';
 import { useEffect } from 'react';
 import AppCard from '../_components/AppCard';
+import { Toaster } from '@/components/ui/toaster';
 
 export default function ApplyPage() {
     const { fetchApplications, apps } = useApplicationStore();
@@ -19,7 +20,7 @@ export default function ApplyPage() {
             <div className="inset-0 bg-gradient-to-b from-red-900/30 to-gray-900/60"></div>
             <ParticleBackground />
             <Navbar />
-            
+            <Toaster />     {/* toast hook */}
             <div className="w-full h-full p-4 pt-20">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {apps.map((app: any) => (
@@ -30,7 +31,7 @@ export default function ApplyPage() {
 
             {apps.length === 0 && (
                 <div className="absolute inset-0 flex items-center justify-center text-white text-2xl">
-                    <p className='bg-red-500 p-3 rounded-lg '>No applications found :(</p>
+                    <p className='bg-gray-700 p-3 rounded-lg '>No applications found :(</p>
                 </div>
             )}
 

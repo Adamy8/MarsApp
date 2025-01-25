@@ -16,8 +16,8 @@ export const useApplicationStore = create((set) => ({
         if (!res.ok) {
             throw new Error(`HTTP error! status: ${res.status}`);
         }
-        set((state) => ({apps:{...state.apps, data}}))
-        return { success: data.success, message: data.message}
+        set((state) => ({apps:[...state.apps, data]}));
+        return { success: data.success, message: data.message};
     },
 
     fetchApplications: async () => {

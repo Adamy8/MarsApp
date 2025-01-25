@@ -65,9 +65,10 @@ export default function MultiStageForm() {
       toast({
         variant: "successA",  // personalized in toast.tsx
         title: message + "!",
-        description: "Redirecting...",
+        description: "Thank you for your application!",
+        duration: 1000,
       })
-      await delay(1200);  //0.5s
+      // await delay(1200);  //1.2s
       methods.reset()    //might dont need it, cuz redirecting
       redirect('/');
     } else {
@@ -94,8 +95,8 @@ export default function MultiStageForm() {
   const stageNames = ["Personal Information", "Travel Preferences", "Health and Safety"];
   const stageName = stageNames[stage - 1];
   return (
-    <FormProvider {...methods}>
-      <Card className="w-full max-w-2xl mx-auto">
+    <FormProvider {...methods} >
+      <Card className="w-full max-w-2xl mx-auto opacity-90">
         <CardHeader>
           <CardTitle> {stageName} </CardTitle>
         </CardHeader>

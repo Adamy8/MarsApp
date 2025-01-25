@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import ParticleBackground from "@/components/ParticleBackground"
 import { Rocket, Satellite, Star, PlaneTakeoff, Earth } from "lucide-react"
+import { Toaster } from "@/components/ui/toaster"
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
             Apply Now!
           </Button>
         </Link>
-
+        <Toaster />
         <div className="absolute top-0 right-0 p-4">
           <Link href="/board">     {/* develop later!! */}
             <Button className="text-white bg-gray-900 bg-opacity-50 px-4 py-2 rounded-lg hover:bg-opacity-70 transition-all duration-300">
