@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { useApplicationStore } from '../_store/application';
 import { useToast } from "@/hooks/use-toast"
-import { Toaster } from "@/components/ui/toaster"
 import { Button } from '@/components/ui/button';
 
 // interface App {

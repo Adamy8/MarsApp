@@ -16,7 +16,11 @@ export const useApplicationStore = create((set) => ({
         if (!res.ok) {
             throw new Error(`HTTP error! status: ${res.status}`);
         }
-        set((state) => ({apps:[...state.apps, data]}));
+        set((state) => {
+            const updatedApps = [...state.apps, data];
+            // console.log("Updated apps: ", updatedApps); // Log the updated state
+            return { apps: updatedApps };
+        });
         return { success: data.success, message: data.message};
     },
 

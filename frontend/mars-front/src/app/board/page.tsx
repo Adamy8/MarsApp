@@ -24,6 +24,7 @@ export default function ApplyPage() {
             <div className="w-full h-full p-4 pt-20">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {apps.map((app: any) => (
+                    // console.log(app),
                     <AppCard key={app._id} app={app} />
                 ))}
             </div>
