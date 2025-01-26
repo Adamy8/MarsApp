@@ -19,9 +19,10 @@
 
 ## 🚧 Work in Progress
 - 🥴 When just finishing applying, clicking `All applications` will lead to a client side error. ***Need to refresh page before proceeding.***
-- 🎏 Better UIUX for /board page, reveal all application with better style
+- 🎏 Better UIUX for /board page, reveal all applications with better style.
 - 📈 Current structure uses a seperate server. May combine them for easy deployment in the future.
-- 🔑 Authentication for visiting all applicaitons page.
+- 🔑 Authentication for visiting the all applicaitons page.
+- 📮 Integrate Email Notification API to send confirmation email to the user after applying.
 
 ## 🛠️ Tech stack:
 - **Frontend**: Nextjs, React, ShadCN, Tailwind CSS, Lucide React Icon, Zustand, TypeScript
