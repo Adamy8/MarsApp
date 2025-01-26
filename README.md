@@ -10,7 +10,7 @@
 - Backend API powered by Node.js.
 - Deployed using Vercel (frontend) and Render (backend).
 - RESTful API integration between frontend and backend.
-- Store applications in MongoDB.
+- Stored applications in MongoDB.
 
 ## ✨ Current Features
 - `Apply now`: Multi-stage form for application (able to go back-and-forth)
@@ -19,7 +19,11 @@
 - `Show more`: show the full content of the application
 
 ## 🚧 Work in Progress
-- 🥴 When just finishing applying, clicking `All applications` will lead to a client side error. ***Need to refresh page before proceeding.***
+- 🥴 When right after finishing applying, clicking `All applications` will lead to a client side error.
+  - ‼️ ***Need to refresh page.*** <br>
+- 🧰 Deploy through AWS services. `Render free tier`(backend server provider) deactivates after 15min inactivity.
+  - ❗️It **takes a few seconds** to spin up again each time. <br>
+  - If you application didn't work/ Applications board shows nothing: `Please wait for a few seconds.`
 - 🎏 Better UIUX for /board page, reveal all applications with better style.
 - 📈 Current structure uses a seperate server. May combine them for easy deployment in the future.
 - 🔑 Authentication for visiting the all applicaitons page.
