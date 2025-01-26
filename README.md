@@ -1,5 +1,7 @@
 # MarsApp 🪐 (coding assessment)
 
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/license/MIT)
+
 ### Live link: https://adamye.dev
 
 ## 🚀 Project Description
