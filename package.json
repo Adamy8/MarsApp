@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development nodemon backend/server.js",
-    "build": "npm install && npm install --prefix frontend/mars-front && npm run build --prefix frontend/mars-front",
+    "build": "npm install",
     "start": "NODE_ENV=production node backend/server.js"
   },
   "type": "module",

@@ -6,6 +6,7 @@ import { useApplicationStore } from '../_store/application';
 import { useEffect } from 'react';
 import AppCard from '../_components/AppCard';
 import { Toaster } from '@/components/ui/toaster';
+import Head from "next/head"
 
 export default function ApplyPage() {
     const { fetchApplications, apps } = useApplicationStore();
@@ -17,9 +18,9 @@ export default function ApplyPage() {
 
     return (
         <div className="relative min-h-screen bg-[url('../mars.jpg')] bg-cover bg-center">
-            <head>
+            <Head>
                 <title>MarsApp-Applications</title>
-            </head>
+            </Head>
             <div className="inset-0 bg-gradient-to-b from-red-900/30 to-gray-900/60"></div>
             <ParticleBackground />
             <Navbar />

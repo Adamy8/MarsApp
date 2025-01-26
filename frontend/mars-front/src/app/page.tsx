@@ -3,13 +3,14 @@ import { Button } from "@/components/ui/button"
 import ParticleBackground from "@/components/ParticleBackground"
 import { Rocket, Satellite, Star, PlaneTakeoff, Earth } from "lucide-react"
 import { Toaster } from "@/components/ui/toaster"
+import Head from "next/head"
 
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-[url('../mars.jpg')] bg-cover bg-center">
-      <head>
+      <Head>
         <title>MarsApp-Home</title>
-      </head>
+      </Head>
       <div className="absolute inset-0 bg-gradient-to-b from-red-900/70 to-gray-900/70"></div>
       <ParticleBackground />
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4">
