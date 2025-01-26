@@ -57,7 +57,7 @@ export default function MultiStageForm() {
   // const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
   const { createApplication } = useApplicationStore()
   const onSubmit = async (data: FormData) => {
-    // console.log("Form submitted: ", data)  //debug
+    console.log("Form submitted: ", data)  //log
     const {success, message} = await createApplication(data);
     // console.log("success , message: ", success, message) //debug
 
