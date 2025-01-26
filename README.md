@@ -60,6 +60,7 @@ npm run start
 ```
 #### 5. Open a browser and navigate to ```http://localhost:3000```
 
+<br>
 
 > [!Note]
 > You need ***Node.js*** installed to start. Download at https://nodejs.org/. <br>
