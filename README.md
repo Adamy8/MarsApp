@@ -21,7 +21,7 @@
 ## 🚧 Work in Progress
 - 🥴 When right after finishing applying, clicking `All applications` will lead to a client side error.
   - ‼️ ***Need to refresh page.*** <br>
-- 🧰 Deploy through AWS services. `Render free tier`(backend server provider) deactivates after 15min inactivity.
+- 🧰 Deploy through AWS paid services. `Render free tier`(backend server provider) deactivates after 15min inactivity.
   - ❗️It **takes a few seconds** to spin up again each time. <br>
   - If you application didn't work/ Applications board shows nothing: `Please wait for a few seconds.`
 - 🎏 Better UIUX for /board page, reveal all applications with better style.
