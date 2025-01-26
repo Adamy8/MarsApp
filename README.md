@@ -15,10 +15,9 @@
 - `Show more`: show the full content of the application
 
 ## 🚧 Work in Progress
+- 🥴 When just finishing applying, clicking `All applications` will lead to a client side error. ***Need to refresh page before proceeding.***
 - 🎇 Better UIUX for /board page, reveal all application with better style
 - 📈 Current structure uses a seperate server. May combine them for easy deployment in the future.
-- 🥴 When just finishing applying, clicking `All applications` will lead to a client side error. ***Need to refresh page before proceeding.***
-
 
 ## 🛠️ Tech stack:
 - **Frontend**: Nextjs, React, ShadCN, Tailwind CSS, Lucide React Icon, Zustand, TypeScript
@@ -31,24 +30,33 @@
 ## 🏃‍♂️ Running this project
 #### 1. Clone the repo:
  ```
-git clone https://github.com/Adamy8/StackStage.git
-cd StackStage
+git clone https://github.com/Adamy8/MarsApp.git
+cd MarsApp
 ```
 #### 2. Set up environment variables:
-- create a ```.env``` file containing two line (under /StackStage):
+- create a ```.env``` file (under `/MarsApp`):
 - ```
   MONGO_URI=your_mongodb_connection_string
-  PORT=5010
+  PORT=4000
   ```
-#### 3. Build the project
+- create a ```.env``` file (under `/MarsApp/frontend/mars-front`)
+- This is only needed when deploy(production), not necessay for local dev!
+- ```
+  NODE_PUBLIC_API_URL=Your_backend_deployed_url
+  ``` 
+#### 3. Build the project (run under /MarsApp)
 ```bash
 npm run build
+cd frontend/mars-front
+npm run build
 ```
-#### 4. Start (Localy)
+#### 4. Start (Localy, run under /MarsApp)
 ```bash
 npm run start
+cd frontend/mars-front
+npm run start
 ```
-#### 5. Open a browser and navigate to ```http://localhost:5010```
+#### 5. Open a browser and navigate to ```http://localhost:3000```
 
 
 > [!Note]
