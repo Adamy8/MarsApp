@@ -7,17 +7,19 @@
 - Backend API powered by Node.js.
 - Deployed using Vercel (frontend) and Render (backend).
 - RESTful API integration between frontend and backend.
+- Store applications in MongoDB.
 
 ## ✨ Current Features
 - `Apply now`: Multi-stage form for application (able to go back-and-forth)
-- `All applications`(top right corner): fetch from MongoDB, display all applications
+- `All Applications`(top right corner): fetch from MongoDB, display all applications
 - `Delete`: Delete applications if not wanted
 - `Show more`: show the full content of the application
 
 ## 🚧 Work in Progress
 - 🥴 When just finishing applying, clicking `All applications` will lead to a client side error. ***Need to refresh page before proceeding.***
-- 🎇 Better UIUX for /board page, reveal all application with better style
+- 🎏 Better UIUX for /board page, reveal all application with better style
 - 📈 Current structure uses a seperate server. May combine them for easy deployment in the future.
+- 🔑 Authentication for visiting all applicaitons page.
 
 ## 🛠️ Tech stack:
 - **Frontend**: Nextjs, React, ShadCN, Tailwind CSS, Lucide React Icon, Zustand, TypeScript
@@ -40,7 +42,7 @@ cd MarsApp
   PORT=4000
   ```
 - create a ```.env``` file (under `/MarsApp/frontend/mars-front`)
-- This is only needed when deploy(production), not necessay for local dev!
+  - This is only needed when deploy(production), not necessay for local dev!
 - ```
   NODE_PUBLIC_API_URL=Your_backend_deployed_url
   ``` 
@@ -50,7 +52,7 @@ npm run build
 cd frontend/mars-front
 npm run build
 ```
-#### 4. Start (Localy, run under /MarsApp)
+#### 4. Start (run under /MarsApp)
 ```bash
 npm run start
 cd frontend/mars-front
@@ -60,5 +62,6 @@ npm run start
 
 
 > [!Note]
-> You need ***Node.js*** installed to start. Download at https://nodejs.org/.
+> You need ***Node.js*** installed to start. Download at https://nodejs.org/. <br>
+> Also ***MongoDB*** at https://www.mongodb.com/try/download/community.
 
