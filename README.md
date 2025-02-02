@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/license/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-purple.svg?style=flat-square)](https://makeapullrequest.com)
 
-### Live link: https://adamye.dev
+### Live link: *currently disabled*
 
 ## 🚀 Project Description
 - Fully responsive frontend built with Next.js + React.
